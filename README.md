@@ -1,6 +1,7 @@
 # Deployer
 
-Warning: beta version
+[Deployer](https://deployer.org/) Docker image.
+
 
 ## Arguments
 

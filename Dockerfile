@@ -1,8 +1,8 @@
-FROM php:7.2-alpine
+FROM php:7.4-alpine
 
 MAINTAINER Grzegorz Gąsak <info@vertoo.pl>
 
-ENV VERSION=6.4.3 
+ENV VERSION=6.8.0
 ARG USER_ID=1000
 
 ARG INSTALL_NPM=false
@@ -37,7 +37,7 @@ RUN if [ ${INSTALL_NPM} = true ]; then \
     && if [ ${INSTALL_GULP} = true ]; then \
     npm install -g @vue/cli \
     ;fi \
-;fi    
+;fi
 
 USER deployer
 

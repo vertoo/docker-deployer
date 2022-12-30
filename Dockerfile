@@ -1,8 +1,8 @@
-FROM php:7.4-alpine
+FROM php:8.0-alpine
 
-MAINTAINER Grzegorz Gąsak <info@vertoo.pl>
+LABEL maintainer="Grzegorz Gąsak <info@vertoo.pl>""
 
-ENV VERSION=6.8.0
+ENV VERSION=6.9.0
 ARG USER_ID=1000
 
 ARG INSTALL_NPM=false
@@ -12,7 +12,7 @@ ARG INSTALL_VUE_CLI=false
 
 RUN apk update --no-cache \
     && apk add --no-cache \
-        openssh-client rsync
+        openssh-client rsync unzip php-8.0-zip
 
 RUN addgroup -S deployer \
     && adduser -D -S -u $USER_ID -G deployer deployer \

@@ -12,7 +12,7 @@ ARG INSTALL_VUE_CLI=false
 
 RUN apk update --no-cache \
     && apk add --no-cache \
-        openssh-client rsync unzip php8-zip
+        openssh-client rsync zip unzip php8-zip
 
 RUN addgroup -S deployer \
     && adduser -D -S -u $USER_ID -G deployer deployer \
